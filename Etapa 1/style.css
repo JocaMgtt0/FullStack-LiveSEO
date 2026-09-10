@@ -1,0 +1,105 @@
+:root{
+    --cor-primaria: #003049;
+    --cor-primaria-clara: #669bbc;
+    --cor-erro: #c1121f;
+    --cor-fundo: #ccc;
+    --cor-card: #e5e5e5;
+    --cor-borda: #edede9;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+.card{
+    background-color: var(--cor-card);
+    border: 2px solid var(--cor-borda);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+h1{
+    margin-top: 0;
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    .campo{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    label{
+        color: var(--cor-primaria);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    input{
+        padding: 10px 12px;
+        border: 1px solid var(--cor-borda);
+        border-radius: 6px;
+        font-size: 1rem;
+        background-color: #fff;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus{
+        outline: none;
+        border-color: var(--cor-primaria-clara);
+        box-shadow: 0 0 0 3px rgba(102, 155, 188, 0.35);
+    }
+
+    input:not(:placeholder-shown):invalid{
+        border-color: var(--cor-erro);
+    }
+
+    .mensagem-erro{
+        display: none;
+        color: var(--cor-erro);
+        font-size: 0.8rem;
+    }
+
+    input:not(:placeholder-shown):invalid ~ .mensagem-erro{
+        display: block;
+    }
+
+    button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--cor-primaria);
+        color: #fff;
+        margin-top: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button:hover{
+        background-color: var(--cor-primaria-clara);
+        color: var(--cor-primaria);
+    }
+}
