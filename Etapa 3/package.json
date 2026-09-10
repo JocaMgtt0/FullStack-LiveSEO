@@ -1,0 +1,13 @@
+{
+  "name": "etapa-3",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Filtro de usuários tipado com TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
